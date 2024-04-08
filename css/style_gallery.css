@@ -1,0 +1,166 @@
+body {
+  background: #212121;
+  border: 0px;
+  height: 100%;
+  
+}
+
+header {
+  background: #171717;
+  width: 100%;
+  border: 5px solid #171717;
+  color: #171717;
+  font-family: Andale Mono, monospace;
+  text-align: center;
+  border-image: linear-gradient(90deg,#EEAECA, #EEAECA) 30;
+  border-width: 4px;
+  border-style: solid;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+#uploadLabel {
+  color: white;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  font-size: 24px;
+  background: #34495e;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+#imageDisplay {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  height: 60vh;
+  padding: 3vh 3vh 3vw 3vw
+}
+
+#rSlider {
+  width: 100%;
+}
+
+#bSlider {
+  width: 100%;
+}
+
+#gSlider {
+  width: 100%;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('contrasticon.png');
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 25px;
+  border: 0;
+  background: url('contrasticon.png');
+  cursor: pointer;
+}
+
+h4 {
+  background: -webkit-linear-gradient(270deg,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Andale Mono, monospace;
+}
+
+h1 {
+  background: -webkit-linear-gradient(270deg,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Andale Mono, monospace;
+  font-size: 50px;
+}
+.row {
+  border: 0px;
+}
+.container {
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  border: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.row_group {
+  background: #171717;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 0px;
+}
+.col-7{
+  width: 60%;
+  height: 100%;
+  background: #171717;
+  border-image: linear-gradient(#EEAECA, #94BBE9) 30;
+  border-width: 4px;
+  border-style: solid;
+  border-top: 0px;
+  border-bottom: 0px;
+  
+  height: 90vh;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+:root {
+  scrollbar-width: none;
+}
+
+.image {
+  /* background: linear-gradient(0deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%); */
+  width: 25%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  padding: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.right-stripe {
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  height: 100vh;
+  width: 0.2%;
+  /* Adjust the width of the stripe as needed */
+  position: absolute;
+  top: 6%;
+  left: 80.2%;
+}
+
+.left-stripe {
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  height: 100vh;
+  width: 0.2%;
+  /* Adjust the width of the stripe as needed */
+  position: absolute;
+  left:19.6%;
+  top: 6%;
+}
+
+@media(max-width:25%) {
+  .container {
+      display: flex;
+      flex-direction: column;
+  }
+}

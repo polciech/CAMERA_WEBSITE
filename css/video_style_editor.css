@@ -1,0 +1,91 @@
+
+body {
+    background: #212121;
+    border: 0px;
+    height: 100%;
+    margin: 0px;
+    padding: 0;
+  }
+  
+  header {
+    background: #171717;
+    width: 100%;
+    border: 5px solid #171717;
+    color: #171717;
+    font-family: Andale Mono, monospace;
+    text-align: center;
+    border-image: linear-gradient(90deg,#EEAECA, #EEAECA) 30;
+    border-width: 4px;
+    border-style: solid;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    z-index: 1000;
+  }
+  
+  h1{
+    background: -webkit-linear-gradient(270deg,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Andale Mono, monospace;
+    font-size: 50px;
+  }
+
+  #videoContainer {
+    position: relative;
+}
+
+.col-12 {
+  height: 90vh;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+  
+  .container {
+    background: #171717; /*Jak ci to przeszkadza to zakomentuj to*/
+    border-image: linear-gradient(180deg,#EEAECA, #94BBE9) 30;
+    border-width: 4px;
+    border-style: solid;
+    border-top: 0px;
+    border-bottom: 0px;
+  }
+  
+  /* Center the image */
+  .container .row:first-child {
+    display: flex;
+    justify-content: center;
+  }
+
+  .video-overlay .playPauseButton {
+    /* Remove default button styles */
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer; /* Keep hover effect for interaction */
+  
+    /* Position the icon absolutely within video-overlay */
+    position: absolute;
+    bottom: 10px; /* Adjust spacing from bottom as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally with finer adjustment */
+  
+    /* Adjust icon size */
+    font-size: 2rem; /* Adjust font-size for desired size */
+    color: white; /* Set icon color to white */
+  }
+
+  #playPauseButton {
+    background: linear-gradient(180deg,#EEAECA, #94BBE9);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#playPauseButton:focus {
+    outline: none;
+}
+

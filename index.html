@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Capture the moment</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+  <header>
+    <h1>Aparat</h1>
+  </header>
+  <div class="container-fluid" id = "content_container">
+    <div class="col" id=videoColumn>
+      <!-- <h2>Preview</h2> -->
+      <video id="videoPreview" autoplay muted></video>
+      <canvas id="canvas" width="400" height="300"  style="display: none;"></canvas>
+    </div>
+  </div>
+  <div class="right-bar">
+
+
+    <button id="photoButton" type="button" class="button-25"><svg xmlns="http://www.w3.org/2000/svg" width=80%
+        height=80% fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
+        <path
+          d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4z" />
+        <path
+          d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
+      </svg>
+    </button>
+    <button id="startButton" type="button" class="button-25"><svg xmlns="http://www.w3.org/2000/svg" width=80%
+        height=80% fill="currentColor" class="bi bi-camera-video" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1z" />
+      </svg></button>
+    <button id="stopButton" type="button" class="button-25"><svg xmlns="http://www.w3.org/2000/svg" width=80% height=80%
+        fill=#171717 class="bi bi-stop" viewBox="0 0 16 16">
+        <path
+          d="M3.5 5A1.5 1.5 0 0 1 5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11zM5 4.5a.5.5 0 0 0-.5.5v6a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5V5a.5.5 0 0 0-.5-.5z" />
+      </svg></button>
+    <!-- <a id="downloadLink" class="download-link" style="display: none;">⬇️ Download</a> -->
+    <!-- <button id="galleryButton" type="button" class="button-gallery">
+      <img src="https://via.placeholder.com/80" alt="Image" width="60" height="60"/>
+    </button> -->
+    <div class="gallery">
+      <a href="gallery.html">
+        <button class="button-25" type ="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width=70% height=70% fill="currentColor" class="bi bi-image" viewBox="0 0 16 16">
+          <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+          <path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"/>
+          </svg>
+        
+        </button>
+      </a>
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
